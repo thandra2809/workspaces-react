@@ -3,14 +3,7 @@ import React, { Component } from 'react';
 import Person from './Person/Person';
 
 class Persons extends Component {
-  // static getDerivedStateFromProps(props, state) {
-  //   console.log('[Persons.js] getDerivedStateFromProps');
-  //   return state;
-  // }
 
-  // componentWillReceiveProps(props) {
-  //   console.log('[Persons.js] componentWillReceiveProps', props);
-  // }
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('[Persons.js] shouldComponentUpdate');
