@@ -7,7 +7,6 @@ import {SearchBox} from "./components/search-box/search-box.componet";
 
 class App extends Component {
 
-
     constructor() {
         super();
 
