@@ -13,6 +13,18 @@ class App extends Component {
             monsters: [],
             searchField: ""
         };
+
+        /** Very verbose way to bind.  This is related to this binding */
+        /** this.handleChangeBind = this.handleChangeBind.bind(this)*/
+    }
+
+
+    handleChangeBind(e) {
+        this.setState({searchField: e.target.value})
+    }
+
+    handleChange = (e) => {
+        this.setState({searchField: e.target.value})
     }
 
     componentDidMount() {
@@ -33,10 +45,10 @@ class App extends Component {
             monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()));
 
         return (
-            <div className="App" >
+            <div className="App">
                 <h1>Monsters Rolodex</h1>
                 <SearchBox placeholder="Search monsters"
-                           handleChange={e => this.setState({searchField: e.target.value})}></SearchBox>
+                           handleChange={this.handleChange}></SearchBox>
                 <CardList monsters={filteredMonsters}>
                 </CardList>
             </div>
